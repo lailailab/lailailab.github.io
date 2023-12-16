@@ -1,0 +1,54 @@
+{{/* My Custom Block */}}
+
+{{/* Get variables */}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+
+{{/* Add your block layout below */}}
+{{/* Styles can be added to the SCSS file */}}
+{{/* Access custom front matter options via `$block.content` */}}
+{{/* E.g. Access a `mytext` field via `$block.content.mytext` */}}
+
+{{/* Parse the fields as Markdown with Hugo's `RenderString` */}}
+{{ $title := $block.content.title | emojify | $page.RenderString }}
+{{ $text := $block.content.text | emojify | $page.RenderString }}
+{{ $text1 := $block.content.text1 | emojify | $page.RenderString }}
+{{ $text2 := $block.content.text2 | emojify | $page.RenderString }}
+{{ $article := $block.content.article | emojify | $page.RenderString }}
+{{ $additionalInfo := $block.content.additionalInfo | emojify | $page.RenderString }}
+{{ $additionalInfo1 := $block.content.additionalInfo1 | emojify | $page.RenderString }}
+{{ $additionalInfo2 := $block.content.additionalInfo2 | emojify | $page.RenderString }}
+{{ $additionalInfo3 := $block.content.additionalInfo3 | emojify | $page.RenderString }}
+{{ $more := $block.content.more | emojify | $page.RenderString }}
+{{ $youtubeVideo := $block.content.youtubeVideo }}
+
+
+<div id="githubChijinduPokemon">
+    <div>
+        <h2>{{ $title }}</h2>
+    </div>
+
+    <div class="flex-col">
+
+        <div class="description">
+            <p class="article1">{{ $article }}</p>
+            <p class="text">{{ $text }}</p>
+            <p class="additionalInfo">​{{ $additionalInfo }}</p>
+            <p class="text">{{ $text1 }}</p>
+            <p class="additionalInfo">​{{ $additionalInfo1 }}</p>
+            <p class="text">{{ $text2 }}</p>
+            <p class="additionalInfo">​{{ $additionalInfo2 }}</p>
+            <p class="additionalInfo3">{{ $additionalInfo3 }}</p>
+        </div>
+
+        <div class="youtube-container">
+            {{ if $youtubeVideo }}
+            <div class="">
+                <iframe src="{{ $youtubeVideo }}" frameborder="0" allowfullscreen=""></iframe>
+            </div>
+
+            {{ end }}
+        </div>
+
+    </div>
+</div>

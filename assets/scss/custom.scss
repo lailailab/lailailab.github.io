@@ -1,0 +1,121 @@
+/*general styles*/
+
+.additionalInfo {
+  color: #da4444;
+  font-size: 0.8rem;
+
+  a {
+    color: #da4444;
+    font-size: 0.8rem;
+  }
+
+  span {
+    text-decoration: underline;
+  }
+}
+
+.additionalInfo3 {
+    a {
+        color: #ffc800;
+    }
+}
+
+@media only screen and (min-width: 300px) and (-webkit-min-device-pixel-ratio: 1) {
+  .home-section {
+    padding: 0;
+  }
+
+  #section-github-chijindujulian-pokemon {
+    background-color: white;
+
+    #githubChijinduPokemon {
+      h2 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #666666;
+        margin-block-end: 1rem;
+      }
+
+      .text {
+        font-size: 1rem;
+        margin-block-end: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+  #section-github-chijindujulian-pokemon {
+    #githubChijinduPokemon {
+      .flex-col {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 2rem;
+      }
+      .youtube-container {
+        width: 50%;
+        iframe {
+          width: 300px;
+          height: 200px;
+        }
+      }
+
+      .article1 {
+        max-width: 1340px;
+      }
+    }
+  }
+
+  #section-github-chijindujulian-pokemon:nth-child(3) {
+    height: 250px;
+    #githubChijinduPokemon {
+      .flex-col {
+        display: grid;
+      }
+    }
+  }
+
+  
+  #section-github-chijindujulian-pokemon:nth-child(4) {
+    #githubChijinduPokemon {
+      .flex-col {
+        display: flex;
+
+        .description {
+          order: 2;
+        }
+
+        .youtube-container {
+          order: 1;
+        }
+      }
+    }
+  }
+
+  #section-github-chijindujulian-pokemon:nth-child(5) {
+    margin-block-end: 4rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  #section-github-chijindujulian-pokemon {
+    #githubChijinduPokemon {
+      .article1 {
+        max-width: 1340px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 1) {
+  #section-github-chijindujulian-pokemon {
+    #githubChijinduPokemon {
+      .youtube-container {
+        iframe {
+          width: 600px;
+          height: 400px;
+        }
+      }
+    }
+  }
+}
